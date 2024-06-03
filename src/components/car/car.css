@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Glamourous';
+    src: url('../../../public/GlamoroustrialRegular-8MGoM.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+  *{
+    font-family: Bebas Neue, sans-serif;
+  }
+
+body{
+  background-color: black;
+  color: white;
+}
+
+
+.carsWrapper{
+  overflow-x: hidden;
+  
+}
+
+.carsContainer{
+  display: flex;
+  width: 300vw;
+
+  
+}
+
+.car{
+  min-width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

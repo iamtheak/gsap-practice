@@ -1,0 +1,12 @@
+.verticalScrollWrapper{
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+
+.vHeader{
+    background-color: #FAFAFA;
+    color: #222;
+    height: 100%;
+    transform: translateY(-10%);
+}
