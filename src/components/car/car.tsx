@@ -1,3 +1,4 @@
+"use client"
 import { PerspectiveCamera } from '@react-three/drei';
 import { Suspense } from 'react';
 import { GLTF, GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
