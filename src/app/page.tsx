@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useRef, useState } from 'react';
+import { Suspense, useEffect, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { gsap } from "gsap/gsap-core";
 import { useGSAP } from "@gsap/react";
@@ -9,6 +9,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import Car from "@/components/car/car";
 import Content from "@/components/test/test";
 import ReactiveDiv from "@/components/reactiveDiv/reacticeDiv";
+import LoadingScreen from '@/components/loadingScreen/loading';
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -77,7 +78,10 @@ const Home = () => {
   const ferrari55 = useLoader(GLTFLoader, '/static/glb/scuderia_ferrari_f1_sf23_2023.glb');
   const pagani = useLoader(GLTFLoader, '/static/glb/pagani_huayra_roadster_2020.glb');
 
+  
+  const loadingScreen = <LoadingScreen />;
   return (
+    <Suspense fallback={loadingScreen}>
     <main>
       <div style={{ minHeight: "100vh", fontSize: "10rem" }}>
         Incredible Machines Need No Recognition, They Are History
@@ -130,6 +134,8 @@ const Home = () => {
         Random Page
       </div>
     </main>
+    </Suspense>
+    
   );
 };
 

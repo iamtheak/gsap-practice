@@ -10,3 +10,11 @@
     height: 100%;
     transform: translateY(-10%);
 }
+
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 10rem;
+}
